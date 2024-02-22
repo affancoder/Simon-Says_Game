@@ -12,9 +12,10 @@ document.addEventListener("click", function () {
   if (started == false) {
     console.log("Game is started");
     started = true;
-    sbtnSound.play();
 
     levelUp();
+
+    sbtnSound.play();
   }
 });
 
@@ -63,18 +64,18 @@ function levelUp() {
 function checkAns(idx) {
   if (userSeq[idx] === gameSeq[idx]) {
     if (userSeq.length == gameSeq.length) {
-      setTimeout(levelUp, 1000);
+      setTimeout(() => levelUp(), 1000);
     }
   } else {
-    h2.innerHTML = `Game Over! Your score is <b>${level}</b> <br>Press any key to start`;
+    h2.innerHTML = ` Game Over!! Your score is <b> ${level} </b> <br>Press any key to start`;
     document.querySelector("body").style.backgroundColor = "red";
     errorbtn.play();
-    
+
     setTimeout(function () {
       document.querySelector("body").style.backgroundColor =
         "rgb(186, 250, 122)";
       sbtnSound.pause();
-    }, 3000);
+    }, 2500);
     reset();
   }
 }
@@ -82,14 +83,14 @@ function btnPress() {
   let btn = this; //this property it is used to detect button number
   userFlash(btn);
 
-  userColor = btn.getAttribute("id");
+  let userColor = btn.getAttribute("id");
   userSeq.push(userColor);
 
   checkAns(userSeq.length - 1);
 }
 
 let allBtns = document.querySelectorAll(".btn");
-for (btn of allBtns) {
+for (const btn of allBtns) {
   btn.addEventListener("click", btnPress);
 }
 
