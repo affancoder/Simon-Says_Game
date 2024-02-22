@@ -1,13 +1,28 @@
 body {
   text-align: center;
+  background-color: rgb(186, 250, 122);
 }
 
+.bg-music {
+  display: none;
+}
+.error-music {
+  display: none;
+}
+.top-title {
+  display: flex;
+  justify-content: center;
+}
+.top-title img {
+  margin-top: 20px;
+}
 .btn {
   height: 150px;
   width: 150px;
   border-radius: 20%;
-  border: 10px solid black;
-  margin: 1.5rem;
+  border: 7px solid black;
+  margin: 1.2rem;
+  cursor: pointer;
 }
 .btn-container {
   display: flex;

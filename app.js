@@ -12,10 +12,22 @@ document.addEventListener("click", function () {
   if (started == false) {
     console.log("Game is started");
     started = true;
+    sbtnSound.play();
 
     levelUp();
   }
 });
+
+let sbtnSound = document.querySelector(".bg-music");
+let startbtnSound = function () {
+  sbtnSound.play();
+};
+
+let errorbtn = document.querySelector(".error-music");
+
+let pausebtnSound = function () {
+  errorbtn.play();
+};
 
 //Flashing Buttons and level up
 
@@ -56,9 +68,13 @@ function checkAns(idx) {
   } else {
     h2.innerHTML = `Game Over! Your score is <b>${level}</b> <br>Press any key to start`;
     document.querySelector("body").style.backgroundColor = "red";
+    errorbtn.play();
+    
     setTimeout(function () {
-      document.querySelector("body").style.backgroundColor = "white";
-    }, 150);
+      document.querySelector("body").style.backgroundColor =
+        "rgb(186, 250, 122)";
+      sbtnSound.pause();
+    }, 3000);
     reset();
   }
 }

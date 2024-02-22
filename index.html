@@ -5,11 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Simon Says Game</title>
     <link rel="stylesheet" href="style.css" class="rel" />
+    <link rel="icon" href="/img/simonGameLogo.gif" class="icon" />
   </head>
   <body>
-    <h1>Simon Says Game</h1>
+    <audio src="./sounds/bg-music .mp3" class="bg-music" controls></audio>
+    <audio src="./sounds/error-music.mp3" class="error-music" controls></audio>
+    <div class="top-title">
+      <img src="./img/simonGameLogo.gif" width="40px" height="40px" />
+      <h1>&nbsp;Simon Says Game</h1>
+    </div>
     <h2>press any key to start</h2>
-
     <div class="btn-container">
       <div class="line-one">
         <div class="btn red" type="button" id="red">1</div>
