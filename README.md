@@ -1,5 +1,7 @@
 # Simon-Says_Game
 
+https://github.com/affancoder/Simon-Says_Game/assets/113276865/5b990670-f3cc-4002-9d67-6523a8e46383
+
 I made this simon says game by using HTML, CSS AND JAVASCRIPT this is one of my frontend web development project.
 
 The Simon Says game is an engaging and entertaining memory and pattern recognition game that will put your cognitive skills to the test. In this game, players are presented with a series of colored buttons and sounds, and they must replicate the sequence correctly. It's a classic game that challenges your memory and attention to detail while providing hours of fun and mental stimulation.
